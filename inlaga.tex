@@ -1,0 +1,85 @@
+\documentclass[10pt,a4paper,onecolumn,english]{book}
+
+%================================================================%
+%  All packages and new commands are treated in an own document  %
+%================================================================%
+\include{TexFiles/settings}
+\newcommand{\currentyear}{2018}
+\newcommand{\authorname}{Anders Andersson}
+\newcommand{\mytitle}{A Thesis on Computer Science}
+\newcommand{\reportno}{TODO}
+\newcommand{\degreetitle}{Licentiate of Engineering}
+%\newcommand{\degreetitle}{Doctor of Philosophy}
+\newcommand{\division}{Software Engineering}
+
+
+%%==============The document begins here
+\begin{document}
+\frontmatter
+
+%================================================================%
+%                       Auxiliary pages                          %
+%================================================================%
+%================================================================%
+%                          First page                            %
+%================================================================%
+
+\thispagestyle{empty} %\addtolength{\topmargin}{1cm}
+\begin{center}
+  \textsc{Thesis for the Degree of \degreetitle}\\
+\end{center}
+
+\vspace{1.5cm}
+\begin{center} \Large \mytitle
+\end{center}
+
+\vspace{1cm}
+\begin{center}
+\textsc{\authorname} \\
+\end{center}
+
+\vspace{1cm}
+\begin{center}
+Presentation:\\
+February 29th, \currentyear, 13:30\\
+Room 520, Jupiter Building \\
+H\"{o}rselg\aa ngen 5,\\ 
+Chalmers University of Technology, Campus Lindholmen\\
+\vspace{1cm}
+Discussion leader:\\
+Prof. Peter Pan\\
+Excellent University, United States of America
+
+\end{center}
+
+
+\vspace{1cm}
+\begin{figure}[h]
+  \begin{center}
+  %40mm from beginning
+     \includegraphics[width=30mm]{Fig/Avancez50PC.pdf}
+     \hspace{1cm}
+     \includegraphics[width=30mm]{Fig/GU.pdf}
+  \end{center}
+\end{figure}
+\vspace{1cm}
+
+
+\begin{center}
+The thesis is available at:\\
+Department of Computer Science \& Engineering\\
+Chalmers $|$ University of Gothenburg\\
+Gothenburg, Sweden, \currentyear\\
+\vspace{1cm}
+Phone: 031 - 123123123
+\end{center}
+
+
+%================================================================%
+%                       Thesis start                             %
+%================================================================%
+\newpage
+\thispagestyle{empty}
+
+\include{TexFiles/abstract}
+\end{document}

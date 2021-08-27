@@ -1,0 +1,85 @@
+\ifx\phdThesis\undefined
+\newcommand{\degreetitle}{Licentiate of Engineering}
+\newcommand{\reportno}{TODO}
+\newcommand{\reportNoText}{Technical Report No \techReportNumber \\
+ ISSN 1652-876X\\ }
+\else
+\newcommand{\degreetitle}{Doctor of Philosophy}
+\newcommand{\reportNoText}{ISBN \phdISBNNumber\\
+Doktorsavhandlingar vid Chalmers tekniska h\"{o}gskola, Ny serie nr \phdSeriesNumber .\\
+ISSN 0346-718X\\ 
+\vspace{1cm}
+
+\noindent
+Technical Report No \techReportNumber \\
+}
+\fi
+
+
+%================================================================%
+%                          First page                            %
+%================================================================%
+
+\thispagestyle{empty} %\addtolength{\topmargin}{1cm}
+\begin{center}
+  \textsc{Thesis for The Degree of \degreetitle}\\
+\end{center}
+
+\vspace{6cm}
+\begin{center} \Large \mytitle
+\end{center}
+
+\vspace{1cm}
+\begin{center}
+\textsc{\authorname} \\
+\end{center}
+
+\vspace{2cm}
+\begin{figure}[h]
+  \begin{center}
+  %40mm from beginning
+     \includegraphics[width=30mm]{Fig/Avancez50PC.pdf}
+     \hspace{1cm}
+     \includegraphics[width=30mm]{Fig/GU_nu.pdf}
+  \end{center}
+\end{figure}
+\vspace{2cm}
+
+\begin{center}
+Division of \division \\
+Department of Computer Science \& Engineering\\
+Chalmers University of Technology and Gothenburg University\\
+Gothenburg, Sweden, \currentyear \\
+\end{center}
+
+%================================================================%
+%                       Printing page                            %
+%================================================================%
+\newpage
+\thispagestyle{plain}
+
+\vspace{2cm} \noindent \textbf
+\mytitle\\
+
+\noindent
+\textsc{\authorname}\\
+
+\vfill
+
+\noindent
+Copyright \copyright \currentyear \space \authorname \\
+except where otherwise stated. \\
+All rights reserved. \vspace{1cm}
+
+\noindent \reportNoText
+Department of Computer Science \& Engineering\\
+Division of \division \\
+Chalmers University of Technology and Gothenburg University\\
+Gothenburg, Sweden\\
+\vspace{1cm}
+
+\noindent This thesis has been prepared using \LaTeX.
+
+\noindent
+Printed by Chalmers Reproservice,\\
+Gothenburg, Sweden \currentyear.

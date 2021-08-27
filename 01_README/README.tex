@@ -1,0 +1,81 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+
+%opening
+\title{README: PhD/Lic Thesis Template at CSE}
+\author{Grischa Liebel}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is a short introduction to the PhD/Lic thesis template provided by the PhD council.
+Please read this document carefully, as to avoid any annoying mistakes in your final, printed thesis!
+As a PhD council, we provide this template as is.
+While we try to keep it in sync with changes in the central layout instructions, there is no guarantee.
+\end{abstract}
+
+\section{Acknowledgement}
+While the current version of this template has been prepared by Grischa Liebel, the template has in a similar form been circulating in the CSE department for a while.
+Grischa originally received the template from Emil Al\'{e}groth. At that point, it also included some work from Robert Feldt (either only the Rakefile, or the entire template - we don't know).
+This is sadly where the trace ends.
+However, we would like to acknowledge the original author(s) of this template, whoever they may be!
+
+\section{Template Information}
+The current version of this template project is always provided as a read-only link on Sharelatex, \url{https://www.sharelatex.com/read/ngbdwfyxvggy}.
+%
+It is made to build without issues on Sharelatex.
+While it should be straightforward to build it on your own machine, we do not give any support for this.
+
+There are a number of layout decisions made in the template.
+These can be adjusted, but again require your own LaTeX skills.
+These decisions are:
+\begin{enumerate}
+    \item There is one single bibliography for the entire thesis.
+    \item All appendices are located in the end of the thesis.
+\end{enumerate}
+
+\section{Project Structure}
+The template contains of a number of files and folders.
+Roughly, the structure is as follows:
+\begin{itemize}
+    \item main.tex - the main file for your thesis is included in the root folder. In particular, it includes a number of important macros in the beginning (e.g., a flag defining whether it's a PhD or a Lic thesis, your thesis title, the year, division). From here, you can also easily see which other files are included and in which order.
+    \item The inlet (inlaga.tex) and the errata (errata.tex) main files are also included in the root. You do need the inlet (as a loose paper in your thesis and as a PDF to announce the defence). Whether or not you need an errata is to some extent up to you, and also depends on how many and how critical errors you discover after printing.
+    \item The single bibtex (bibliography) file is located in the root level folder as well. If you would like to change to multiple bibliographies in your thesis, you might have to modify this.
+    \item TexFiles contains all other tex files. These are:
+    \begin{itemize}
+        \item abstract.tex - the abstract of your thesis.
+        \item acknowledgment.tex - the acknowledgements.
+        \item appendedPapers.tex - the tex file that references all your papers included in the thesis. Each paper is structured into an abstract file (e.g., Chapter1\_abstract.tex) and the remainder of the paper (e.g., Chapter1.tex).
+        \item contribution.tex - an explanation of your contributions to each included paper.
+        \item dedication.tex - dedication/smart quote at the beginning of your thesis.
+        \item firstpage.tex - the first two pages of your thesis. All the relevant information (e.g., author name, year, title) is set in the main.tex file. So it should not be necessary to touch this file unless it is out of sync with the layout instructions.
+        \item introduction.tex - the kappa (introduction chapter).
+        \item listPub.tex - the list of all publications, both included and others. It only contains a list, the actual links to the tex files of the included papers is in appendedPapers.tex.
+        \item settings.tex - includes, macros, etc. Modify if you need any additional packages, macros or other things that you don't want to clutter the main file with.
+    \end{itemize}
+    \item All figures used in the front pages are located in Fig.
+    \item All figures used in the kappa and the included papers are located in figures.
+\end{itemize}
+
+This structure can easily be adapted to personal preferences.
+The reason to use subfolders for each paper and the figures included in those papers is that makes it quick and easy to replace individual papers (and new versions of those papers in case you want to include a new journal revision).
+
+\section{Layout}
+The current layout is in sync with the Chalmers and GU layout instructions as of March 2018.
+However, these tend to change and we cannot guarantee that we will always react on time (or even know about it).
+Therefore, it is absolutely essential that you check those instructions!
+You can find the layout instructions in the Doctoral Handbook for Chalmers\footnote{In the doctoral handbook under Licentiate Seminar or Doctoral Thesis Defence} and on the IT faculty education pages for GU\footnote{\url{https://itufak.gu.se/english/education/doctoral_studies/licentiate-degree/printing--publication-and-e-publication}}.
+Finally, look at the CSE-specific guidelines in Insidan\footnote{\url{http://www.chalmers.se/insidan/sites/cse/doctoral-studies}} for any specific instructions (e.g., to use the combined GU and Chalmers logotype).
+
+\section{Version Notes}
+\begin{itemize}
+    \item 18th April 2018 (Grischa) - Added the tech report number also for PhD theses.
+    \item 16th April 2018 (Grischa) - Fixed the ISBN. Now the template follows the current layout instructions for both PhD and Lic.
+    \item 13th March 2018 (Grischa) - Cleaned up the template and wrote these instructions. Both the inlet and the errata should be revisited. Also, the second page (part of firstpage.tex) does not yet include the ISBN needed for PhD theses. For Lic it's fine!
+\end{itemize}
+
+\end{document}

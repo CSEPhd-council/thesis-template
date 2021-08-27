@@ -1,0 +1,103 @@
+%%=========================================================================%
+%%                               Settings                                  %
+%%=========================================================================%
+
+% G5 format
+\usepackage{geometry}
+\geometry{paperwidth=169mm, paperheight=239mm,
+left=25mm,right=25mm,top=17mm, bottom=14mm}
+
+%-----------------------Used packages---------------------------------------------------------%
+\usepackage{fancyhdr}
+\pagestyle{fancy} \fancyhead[LE]{\thepage}
+\fancyhead[RE]{\scriptsize \slshape \leftmark}
+\fancyhead[LO]{\scriptsize \slshape \rightmark}
+\fancyhead[RO]{\thepage} \fancyfoot[C]{}
+
+\setcounter{secnumdepth}{3} \setcounter{tocdepth}{3}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{url}
+% \usepackage{multibib}
+
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amscd,latexsym,dsfont}
+%\usepackage[latin1]{inputenc}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+\usepackage{cite}
+%\usepackage{latexsym}
+\usepackage{textcomp}
+% \usepackage{multirow}
+% \usepackage{multicol}
+\usepackage{psfrag}
+\usepackage{rotating}
+%\usepackage{xspace}
+\usepackage{enumerate}
+\usepackage{pdflscape}
+
+
+\usepackage[final]{pdfpages}
+\usepackage{xspace}
+\usepackage{relsize}
+
+\usepackage{url}
+\usepackage{IEEEtrantools}
+
+% \usepackage{fixltx2e}
+
+\usepackage{microtype}
+
+\usepackage{todonotes}
+
+%-----------------------Thesis title----------------------------------------------------------%
+\newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\chapref}[1]{Chap.~\ref{sec:#1}}
+\newcommand{\BT}{\boldsymbol{\theta}}
+\newcommand{\bft}[1]{\ensuremath{\mathbf{\tilde{#1}}}}
+\newcommand{\bof}[1]{{\mbox{\boldmath$#1$}}}
+\newcommand{\bfh}[1]{\ensuremath{\mathbf{\hat{#1}}}}
+\newcommand{\super}[1]{\raisebox{0.7ex}{\scriptsize #1}} 
+\newcommand{\sub}[1]{\raisebox{-0.5ex}{\scriptsize #1}}
+\newcommand{\D}{\displaystyle}
+\newcommand{\B}[1]{\mathbf{#1}}
+\newcommand{\M}[1]{\mbox{#1}}
+\newcommand{\R}[1]{\mathrm{#1}}
+\newcommand{\E}[1]{\R{e}^{\hspace{0.05em}#1}}
+\newcommand{\EJ}[1]{\R{e}^{\hspace{0.1em}\R{j}#1}}
+\newcommand{\EJM}[1]{\R{e}^{\hspace{0.05em}-\R{j}#1}}
+\newcommand{\betab}{\mbox{\boldmath$\beta$}}
+\newcommand{\alphab}{\mbox{\boldmath$\alpha$}}
+\newcommand{\tr}[1]{\mathrm{#1}}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\wmb}[1]{\widetilde{\mb{#1}}}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathsf{#1}}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\cd}{\cdot}
+\newcommand{\ld}{\ldots}
+\newcommand{\real}[1]{\Re[#1]}
+\newcommand{\imag}[1]{\Im[#1]}
+\newcommand{\arr}[2]{$\begin{array}{c} #1 \\ #2 \end{array}$}
+\newcommand{\LL}[1]{\overline{\mc{#1}}}
+\newcommand{\ds}[1]{\displaystyle{#1}}
+
+
+\newcommand{\scalefactorOO}{0.45}
+
+% commands
+%use this command to denote figure element that appear inside a figure
+\newcommand{\fe}[1]{\textsf{\small #1}}
+
+\newcommand{\p}[1]{\textsf{\small #1}}
+
+\newcommand{\interviewquote}[2]{\begin{quote}
+\footnotesize{\emph{``#1'' }} --- \footnotesize{#2}
+\end{quote} }
+
+%\linespread{1.0}
+% \newcites{ltex}{Appended Publications}
+%\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
