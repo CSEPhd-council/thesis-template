@@ -68,6 +68,7 @@ However, we would like to acknowledge the original author(s) of this template, w
 
 
 ## Version Notes
+- 8th October 2021 (Linda) - updated mentions of the universities to use both on the same form (Chalmers universtity of technology | University of Gothenburg), changed use of one logo, commented out tech report number from lic template since it's not used anymore. 
 - 18th April 2018 (Grischa) - Added the tech report number also for PhD theses.
 - 16th April 2018 (Grischa) - Fixed the ISBN. Now the template follows the current layout instructions for both PhD and Lic.
 - 13th March 2018 (Grischa) - Cleaned up the template and wrote these instructions. Both the inlet and the errata should be revisited. Also, the second page (part of firstpage.tex) does not yet include the ISBN needed for PhD theses. For Lic it's fine!
