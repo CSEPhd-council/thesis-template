@@ -1,13 +1,15 @@
 \ifx\phdThesis\undefined
+%reportNo is not used for lic anymore, but double check with the intranet.
+%in case you need it just uncomment the text after reportNoText command.
 \newcommand{\degreetitle}{Licentiate of Engineering}
 \newcommand{\reportno}{TODO}
-\newcommand{\reportNoText}{Technical Report No \techReportNumber \\
- ISSN 1652-876X\\ }
+\newcommand{\reportNoText}{}}%Technical Report No \techReportNumber \\
+ %ISSN 1652-876X\\ }
 \else
 \newcommand{\degreetitle}{Doctor of Philosophy}
 \newcommand{\reportNoText}{ISBN \phdISBNNumber\\
 Doktorsavhandlingar vid Chalmers tekniska h\"{o}gskola, Ny serie nr \phdSeriesNumber .\\
-ISSN 0346-718X\\ 
+ISSN 0346-718X\\
 \vspace{1cm}
 
 \noindent
@@ -48,7 +50,7 @@ Technical Report No \techReportNumber \\
 \begin{center}
 Division of \division \\
 Department of Computer Science \& Engineering\\
-Chalmers University of Technology and Gothenburg University\\
+Chalmers University of Technology $|$ University of Gothenburg\\
 Gothenburg, Sweden, \currentyear \\
 \end{center}
 
@@ -81,5 +83,5 @@ Gothenburg, Sweden\\
 \noindent This thesis has been prepared using \LaTeX.
 
 \noindent
-Printed by Chalmers Reproservice,\\
+Printed by Chalmers Digitaltryck,\\
 Gothenburg, Sweden \currentyear.
