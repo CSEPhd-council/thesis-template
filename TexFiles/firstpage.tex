@@ -1,23 +1,3 @@
-\ifx\phdThesis\undefined
-%reportNo is not used for lic anymore, but double check with the intranet.
-%in case you need it just uncomment the text after reportNoText command.
-\newcommand{\degreetitle}{Licentiate of Engineering}
-\newcommand{\reportno}{TODO}
-\newcommand{\Text}{%Technical Report No \techReportNumber \\
-ISSN 1652-876X\\ }
-\else
-\newcommand{\degreetitle}{Doctor of Philosophy}
-\newcommand{\reportNoText}{ISBN \phdISBNNumber\\
-Doktorsavhandlingar vid Chalmers tekniska h\"{o}gskola, Ny serie nr \phdSeriesNumber .\\
-ISSN 0346-718X\\
-\vspace{1cm}
-
-\noindent
-Technical Report No \techReportNumber \\
-}
-\fi
-
-
 %================================================================%
 %                          First page                            %
 %================================================================%
@@ -27,16 +7,17 @@ Technical Report No \techReportNumber \\
   \textsc{Thesis for The Degree of \degreetitle}\\
 \end{center}
 
-\vspace{6cm}
-\begin{center} \Large \mytitle
+\vfill
+
+\begin{center} \huge \textbf{\mytitle}
 \end{center}
 
-\vspace{1cm}
+\vspace{1.2cm}
 \begin{center}
 \textsc{\authorname} \\
 \end{center}
 
-\vspace{2cm}
+\vspace{1.4cm}
 \begin{figure}[h]
   \begin{center}
   %40mm from beginning
@@ -45,12 +26,12 @@ Technical Report No \techReportNumber \\
      \includegraphics[width=30mm]{Fig/GU_nu.pdf}
   \end{center}
 \end{figure}
-\vspace{2cm}
+\vspace{1.6cm}
 
 \begin{center}
-Division of \division \\
-Department of Computer Science \& Engineering\\
-Chalmers University of Technology $|$ University of Gothenburg\\
+\textit{Division of \division} \\
+\textit{\mydepartment}\\
+\textsc{\chalIgu}\\
 Gothenburg, Sweden, \currentyear \\
 \end{center}
 
@@ -58,7 +39,7 @@ Gothenburg, Sweden, \currentyear \\
 %                       Printing page                            %
 %================================================================%
 \newpage
-\thispagestyle{plain}
+\thispagestyle{empty}
 
 \vspace{2cm} \noindent \textbf
 \mytitle\\
@@ -66,21 +47,24 @@ Gothenburg, Sweden, \currentyear \\
 \noindent
 \textsc{\authorname}\\
 
-\vfill
-
+\vskip 0.5cm\noindent
+\copyright~\currentyear \space \authorname \\
 \noindent
-Copyright \copyright \currentyear \space \authorname \\
 except where otherwise stated. \\
 All rights reserved. \vspace{1cm}
 
-\noindent \reportNoText
-Department of Computer Science \& Engineering\\
-Division of \division \\
-Chalmers University of Technology and Gothenburg University\\
-Gothenburg, Sweden\\
-\vspace{1cm}
 
-\noindent This thesis has been prepared using \LaTeX.
+\vfill
+
+\noindent \identifierNoText
+\mydepartment\\
+Division of \division\\
+\ifx\researchgroup\undefined\else\researchgroup\\\fi
+\chalIgu\\
+SE-412 96 Göteborg, Sweden\\
+Phone: +46(0)32 772 1000
+
+\vskip 1.5cm
 
 \noindent
 Printed by Chalmers Digitaltryck,\\

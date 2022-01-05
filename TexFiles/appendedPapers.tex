@@ -1,34 +1,51 @@
 %%===============================================================%
+%%                  Macros to append papers                      %
+%%===============================================================%
+\newcounter{papercounter}
+\setcounter{papercounter}{1}
+
+\renewcommand{\thepage}{}
+
+\newcommand{\paperpage}[4]{
+\newpage
+\thispagestyle{empty}
+\cleardoublepage
+\hfill{\Large \textbf{Paper \romannum{\thepapercounter}}}
+\label{app:paper_\arabic{papercounter}}
+\vspace*{\fill}
+    \begin{center}
+        \textbf{\Large #2}\\
+		\vspace{0.5cm}
+        #1\\
+		\vspace{0.5cm}
+        #3
+    \end{center}
+\vfill
+#4
+\addcontentsline{toc}{chapter}{\textbf{Paper \romannum{\thepapercounter}} - #2}
+%----- include -----
+\newpage
+\thispagestyle{empty}
+\cleardoublepage
+\refstepcounter{papercounter}
+}
+
+
+%%===============================================================%
 %%                     Appended papers                           %
 %%===============================================================%
 %Include each paper as shown below. Abstracts are in a separate file.
 
-\chapter{Paper A}
-\label{chap_paper_a}
-\thispagestyle{empty}
-\subsection*{An in-depth analysis of a piece of shit: distribution of Schistosoma mansoni and hookworm eggs in human stool}
-\subsubsection*{S.~J.~Krauth, J.~T.~Coulibaly, S.~Knopp, M.~Traor{\'e}, E.~K.~N'Goran, J.~Utzinger}
-\subsubsection*{{\em PLoS neglected tropical diseases 6(12), 2012}.}
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-\addtocounter{page}{-2}
+\paperpage{\textbf{S.~J.~Krauth}, J.~T.~Coulibaly, S.~Knopp, M.~Traor{\'e}, E.~K.~N'Goran, J.~Utzinger}{An in-depth analysis of a piece of shit: distribution of Schistosoma mansoni and hookworm eggs in human stool}{PLoS neglected tropical diseases 6(12), 2012}{doi goes here}
 
-\input{TexFiles/Chapter1_abstract}
-\input{TexFiles/Chapter1}
+% You can use this to include a pdf file instead
+%\includepdf[pages={-}]{papers/some-paper.pdf}
 
-\chapter{Paper B}
-\label{chap_paper_b}
-\thispagestyle{empty}
-\subsection*{The Second Paper}
-\subsubsection*{A.~Andersson}
-\subsubsection*{{\em In submission to Journal of Universal Rejection}.}
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-\addtocounter{page}{-2}
+\input{papers/paper1_abstract}
+\input{papers/paper1}
 
-\input{TexFiles/Chapter2_abstract}
-\input{TexFiles/Chapter2}
+
+\paperpage{\textbf{A.~Andersson}}{The Second Paper}{In submission to Journal of Universal Rejection}{doi goes here}
+
+\input{papers/paper2_abstract}
+\input{papers/paper2}
