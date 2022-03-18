@@ -9,6 +9,8 @@
 \newcommand{\currentyear}{2018}
 \newcommand{\authorname}{Anders Andersson}
 \newcommand{\mytitle}{A Thesis on Computer Science}
+\newcommand{\mysubtitle}{With some subtitle if you want it} % Comment out if you don't want a subtitle
+
 \newcommand{\division}{Software Engineering}
 \newcommand{\researchgroup}{Some Research Group} % Comment out if not applicable
 
@@ -48,10 +50,8 @@ ISSN \licISSN\\
 \newcommand{\identifierNoText}{ISBN \phdISBN\\
 Doktorsavhandlingar vid Chalmers tekniska h\"{o}gskola, Ny serie nr \phdSeriesNumber .\\
 ISSN \phdISSN\\
-\vspace{1cm}
-
-\noindent
-Technical Report No \techReportNumber \\
+Technical Report No. \techReportNumber \\
+\vspace{1.5cm}
 }
 \fi
 
@@ -67,9 +67,11 @@ Technical Report No \techReportNumber \\
 \usepackage{geometry}
 
 \ifx\inlagaPage\undefined
+% Thesis is paper size G5
 \geometry{paperwidth=169mm, paperheight=239mm, inner=28mm,outer=22mm,top=22mm, bottom=18mm}
 \else
-\geometry{paperwidth=169mm, paperheight=239mm, inner=25mm,outer=25mm,top=22mm, bottom=18mm}
+% Presentation sheet uses paper size A5
+\geometry{paperwidth=148mm, paperheight=210mm, inner=25mm,outer=25mm,top=22mm, bottom=18mm}
 \fi
 
 %-----------------------Used packages---------------------------------------------------------%
@@ -162,37 +164,6 @@ Technical Report No \techReportNumber \\
 \newcommand*{\my@test@it}{it}
 \makeatother
 
-
-%-----------------------Thesis title----------------------------------------------------------%
-\newcommand{\BT}{\boldsymbol{\theta}}
-\newcommand{\bft}[1]{\ensuremath{\mathbf{\tilde{#1}}}}
-\newcommand{\bof}[1]{{\mbox{\boldmath$#1$}}}
-\newcommand{\bfh}[1]{\ensuremath{\mathbf{\hat{#1}}}}
-\newcommand{\super}[1]{\raisebox{0.7ex}{\scriptsize #1}} 
-\newcommand{\sub}[1]{\raisebox{-0.5ex}{\scriptsize #1}}
-\newcommand{\D}{\displaystyle}
-\newcommand{\B}[1]{\mathbf{#1}}
-\newcommand{\M}[1]{\mbox{#1}}
-\newcommand{\R}[1]{\mathrm{#1}}
-\newcommand{\E}[1]{\R{e}^{\hspace{0.05em}#1}}
-\newcommand{\EJ}[1]{\R{e}^{\hspace{0.1em}\R{j}#1}}
-\newcommand{\EJM}[1]{\R{e}^{\hspace{0.05em}-\R{j}#1}}
-\newcommand{\betab}{\mbox{\boldmath$\beta$}}
-\newcommand{\alphab}{\mbox{\boldmath$\alpha$}}
-\newcommand{\tr}[1]{\mathrm{#1}}
-\newcommand{\mb}[1]{\mathbf{#1}}
-\newcommand{\wmb}[1]{\widetilde{\mb{#1}}}
-\newcommand{\wh}[1]{\widehat{#1}}
-\newcommand{\mc}[1]{\mathcal{#1}}
-\newcommand{\mf}[1]{\mathsf{#1}}
-\newcommand{\set}[1]{\{#1\}}
-\newcommand{\cd}{\cdot}
-\newcommand{\ld}{\ldots}
-\newcommand{\real}[1]{\Re[#1]}
-\newcommand{\imag}[1]{\Im[#1]}
-\newcommand{\arr}[2]{$\begin{array}{c} #1 \\ #2 \end{array}$}
-\newcommand{\LL}[1]{\overline{\mc{#1}}}
-\newcommand{\ds}[1]{\displaystyle{#1}}
 
 \newcommand{\romannum}[1]{{\uppercase\expandafter{\romannumeral #1\relax}}}
 

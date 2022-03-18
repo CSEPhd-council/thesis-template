@@ -2,12 +2,12 @@
 %%                  Macros to append papers                      %
 %%===============================================================%
 \newcounter{papercounter}
-\setcounter{papercounter}{1}
-
-\renewcommand{\thepage}{}
+\setcounter{papercounter}{0}
 
 \newcommand{\paperpage}[4]{
 \newpage
+\refstepcounter{papercounter}
+\renewcommand{\thepage}{}
 \thispagestyle{empty}
 \cleardoublepage
 \hfill{\Large \textbf{Paper \romannum{\thepapercounter}}}
@@ -27,25 +27,54 @@
 \newpage
 \thispagestyle{empty}
 \cleardoublepage
-\refstepcounter{papercounter}
 }
 
+% To avoid adding things to the TOC
+\makeatletter
+
+\newcommand{\nocontentsline}[3]{}
+\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
+
+\let\oldsection\section
+\newcommand{\@sectionstar}[1]{{\oldsection*{#1}}}
+\newcommand{\@sectionnostar}[1]{{\tocless\oldsection{#1}}}
+\renewcommand{\section}{\@ifstar{\@sectionstar}{\@sectionnostar}}
+
+
+\let\oldsubsection\subsection
+\newcommand{\@subsectionstar}[1]{{\oldsubsection*{#1}}}
+\newcommand{\@subsectionnostar}[1]{{\tocless\oldsubsection{#1}}}
+\renewcommand{\subsection}{\@ifstar{\@subsectionstar}{\@subsectionnostar}}
+
+\makeatother
 
 %%===============================================================%
 %%                     Appended papers                           %
 %%===============================================================%
 %Include each paper as shown below. Abstracts are in a separate file.
 
-\paperpage{\textbf{S.~J.~Krauth}, J.~T.~Coulibaly, S.~Knopp, M.~Traor{\'e}, E.~K.~N'Goran, J.~Utzinger}{An in-depth analysis of a piece of shit: distribution of Schistosoma mansoni and hookworm eggs in human stool}{PLoS neglected tropical diseases 6(12), 2012}{doi goes here}
+\paperpage{\textbf{A.~Andersson}, S.~O.~Person, J.~Whoever}{Title of the first paper}{Some Journal 39 (May 2019), 133-144}{doi goes here}
 
 % You can use this to include a pdf file instead
 %\includepdf[pages={-}]{papers/some-paper.pdf}
+
+\renewcommand{\thepage}{{\arabic{page} (\romannum{\thepapercounter})}}
+\setcounter{page}{1}
+
+\pagestyle{plain}
 
 \input{papers/paper1_abstract}
 \input{papers/paper1}
 
 
-\paperpage{\textbf{A.~Andersson}}{The Second Paper}{In submission to Journal of Universal Rejection}{doi goes here}
+%%%%%%
+
+\paperpage{\textbf{A.~Andersson}}{The Second Paper}{Submitted, under review}{}
+
+\renewcommand{\thepage}{{\arabic{page} (\romannum{\thepapercounter})}}
+\setcounter{page}{1}
+
+\pagestyle{plain}
 
 \input{papers/paper2_abstract}
 \input{papers/paper2}

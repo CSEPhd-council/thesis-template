@@ -4,13 +4,6 @@
 %  All packages and new commands are treated in an own document  %
 %================================================================%
 \include{TexFiles/settings}
-\newcommand{\currentyear}{2018}
-\newcommand{\authorname}{Anders Andersson}
-\newcommand{\mytitle}{A Thesis on Computer Science}
-\newcommand{\reportno}{TODO}
-\newcommand{\degreetitle}{Licentiate of Engineering}
-%\newcommand{\degreetitle}{Doctor of Philosophy}
-\newcommand{\division}{Software Engineering}
 
 
 %%==============The document begins here
@@ -24,54 +17,70 @@
 %                          First page                            %
 %================================================================%
 
+\renewcommand{\thepage}{}
+
 \thispagestyle{empty} %\addtolength{\topmargin}{1cm}
 \begin{center}
-  \textsc{Thesis for the Degree of \degreetitle}\\
+%  \textsc{Thesis for the Degree of \degreetitle}\\
 \end{center}
 
-\vspace{1.5cm}
-\begin{center} \Large \mytitle
+
+%\vfill
+
+\begin{center} {\LARGE \textbf{\mytitle}}
+\ifx\mysubtitle\undefined
+\else
+  \\
+  \vspace{0.4cm}
+  \textit{\large\mysubtitle}
+\fi
 \end{center}
 
-\vspace{1cm}
+\vspace{5mm}
 \begin{center}
-\textsc{\authorname} \\
+\textsc{\large\authorname} \\
 \end{center}
+\vspace{5mm}
 
-\vspace{1cm}
 \begin{center}
-Presentation:\\
-February 29th, \currentyear, 13:30\\
+\textit{The seminar will be held in}\\
+\vskip 2mm
 Room 520, Jupiter Building \\
 H\"{o}rselg\aa ngen 5,\\
 Chalmers University of Technology, Campus Lindholmen\\
+\vskip 1mm
+\textit{on}\\
+\vskip 1mm
+February 29th, \currentyear, 13:30\\
+
 \vspace{1cm}
+
 Discussion leader:\\
 Prof. Peter Pan\\
 Excellent University, United States of America
-
 \end{center}
 
-
-\vspace{1cm}
-\begin{figure}[h]
-  \begin{center}
-  %40mm from beginning
-     \includegraphics[width=30mm]{Fig/Avancez50PC.pdf}
-     \hspace{1cm}
-     \includegraphics[width=30mm]{Fig/GU_nu.pdf}
-  \end{center}
-\end{figure}
 \vspace{1cm}
 
 
 \begin{center}
 The thesis is available at:\\
 Department of Computer Science \& Engineering\\
-Chalmers University of Technology $|$ University of Gothenburg\\
+\chalIgu\\
 Gothenburg, Sweden, \currentyear\\
 \vspace{1cm}
-Phone: 031 - 7721000
+Phone: +46 (0)31 772 1000
+\end{center}
+
+\vfill
+
+\begin{center}
+\begin{tabular}[h]{ c c }
+  %40mm from beginning
+  \vspace{0pt}\includegraphics[width=45mm]{figures/chalmers_logo.pdf}
+  &
+  \vspace{0pt}\includegraphics[width=45mm]{figures/gu_logo.pdf}
+\end{tabular}
 \end{center}
 
 

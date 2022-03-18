@@ -7,29 +7,29 @@
   \textsc{Thesis for The Degree of \degreetitle}\\
 \end{center}
 
+\vspace{4cm}
+
+\begin{center} {\LARGE \textbf{\mytitle}}\\
+\ifx\mysubtitle\undefined
+\else
+  \vspace{4mm}
+  \textit{\large\mysubtitle}
+\fi
+\end{center}
+
+\ifx\mysubtitle\undefined
+\vspace{5mm}
+\else
+\vspace{2mm}
+\fi
+
+\begin{center}
+\textsc{\large\authorname} \\
+\end{center}
+
 \vfill
 
-\begin{center} \huge \textbf{\mytitle}
-\end{center}
-
-\vspace{1.2cm}
 \begin{center}
-\textsc{\authorname} \\
-\end{center}
-
-\vspace{1.4cm}
-\begin{figure}[h]
-  \begin{center}
-  %40mm from beginning
-     \includegraphics[width=30mm]{Fig/Avancez50PC.pdf}
-     \hspace{1cm}
-     \includegraphics[width=30mm]{Fig/GU_nu.pdf}
-  \end{center}
-\end{figure}
-\vspace{1.6cm}
-
-\begin{center}
-\textit{Division of \division} \\
 \textit{\mydepartment}\\
 \textsc{\chalIgu}\\
 Gothenburg, Sweden, \currentyear \\
@@ -43,12 +43,17 @@ Gothenburg, Sweden, \currentyear \\
 
 \vspace{2cm} \noindent \textbf
 \mytitle\\
+\ifx\mysubtitle\undefined
+\else
+  \textit{\small\mysubtitle}
+  \\
+\fi
 
 \noindent
 \textsc{\authorname}\\
 
 \vskip 0.5cm\noindent
-\copyright~\currentyear \space \authorname \\
+\copyright \space \authorname,~\currentyear  \\
 \noindent
 except where otherwise stated. \\
 All rights reserved. \vspace{1cm}
@@ -57,14 +62,21 @@ All rights reserved. \vspace{1cm}
 \vfill
 
 \noindent \identifierNoText
+
+\noindent 
 \mydepartment\\
 Division of \division\\
 \ifx\researchgroup\undefined\else\researchgroup\\\fi
 \chalIgu\\
-SE-412 96 Göteborg, Sweden\\
-Phone: +46(0)32 772 1000
+SE-412 96 Göteborg,\\
+Sweden\\
+Phone: +46(0)31 772 1000
 
 \vskip 1.5cm
+
+%Cover:\\
+% If there is a cover image, you should describe it here
+%\\
 
 \noindent
 Printed by Chalmers Digitaltryck,\\

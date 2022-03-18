@@ -2,23 +2,26 @@
 %                       Appended papers                          %
 %================================================================%
 \chapter*{List of Publications}
-\label{A:Papers}
+\label{chap:papers}
 
 \section*{Appended publications}
 This thesis is based on the following publications:
-\renewcommand{\labelenumi}{[\Alph{enumi}]}
-\begin{enumerate}
 
-\item S.~J.~Krauth, J.~T.~Coulibaly, S.~Knopp, M.~Traor{\'e}, E.~K.~N'Goran, J.~Utzinger
-\newblock ``An in-depth analysis of a piece of shit: distribution of Schistosoma mansoni and hookworm eggs in human stool''\\
-\newblock {\em PLoS neglected tropical diseases 6(12), 2012}.
+\newcommand{\pubitem}[3]{\item #1,
+\newblock {\textit{#2}}\\
+\newblock {\em #3}.
+}
 
-\item A.~Andersson
-\newblock ``The Second Paper''\\
-\newblock {\em In submission to Journal of Universal Rejection}.
+\begin{enumerate}[align=left,label={[\textbf{Paper \Roman*}]}]
+
+    \pubitem{\textbf{A.~Andersson}, S.~O.~Person, J.~Whoever}{Title of the first paper}{Some Journal 39 (May 2019), 133-144}
+
+    \pubitem{\textbf{A.~Andersson}}{Title of the second paper}{Submitted, under review}
 
 \end{enumerate}
 
+
+% You might not need the following, remove it if so
 
 \newpage
 %================================================================%
@@ -28,9 +31,9 @@ This thesis is based on the following publications:
 The following publications were published during my PhD studies, or are currently in submission/under revision.
 However, they are not appended to this thesis, due to contents overlapping that of appended publications or contents not related to the thesis.
 
-\renewcommand{\labelenumi}{[\alph{enumi}]}
-\begin{enumerate}
- \item A.~Andersson
- \newblock ``Nothing: Revisited''\\
- \newblock {\em PloS Two, 2012}
- \end{enumerate}
+\begin{enumerate}[align=left,label={[\textbf{\alph*}]}]
+
+    \pubitem{\textbf{A.~Andersson}}{Nothing: Revisited}{Some Journal 40 (June 2019), 125-126}
+
+\end{enumerate}
+
