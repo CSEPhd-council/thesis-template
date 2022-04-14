@@ -1,23 +1,11 @@
-\documentclass[10pt,onecolumn,english]{book}
+\documentclass[10pt,onecolumn,openright]{book}
+
+% Configure title, author, etc of the thesis in TexFiles/settings.tex
 
 %================================================================%
 %  All packages and new commands are treated in an own document  %
 %================================================================%
-\include{TexFiles/settings}
-
-%Comment out or remove if it's a Licentiate thesis!
-\def\phdThesis{1}
-
-% Important commands for this thesis!
-\newcommand{\currentyear}{2018}
-\newcommand{\authorname}{Anders Andersson}
-\newcommand{\mytitle}{A Thesis on Computer Science}
-\newcommand{\division}{Software Engineering}
-\newcommand{\techReportNumber}{XXXX}
-
-%PHD ONLY
-\newcommand{\phdISBNNumber}{xxx-xx-xxxx-xxx-x}
-\newcommand{\phdSeriesNumber}{xxxx}
+\input{TexFiles/settings}
 
 %%==============The document begins here
 \begin{document}
@@ -30,68 +18,95 @@
 %CHECK those to be sure the format is up to date and everything is included!
 \include{TexFiles/firstpage}
 
+\setcounter{page}{1}
 %The dedication.
+\thispagestyle{plain}
 \include{TexFiles/dedication}
 
 %Abstract. Word length regulated by Chalmers/GU layouting guidelines.
+\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage \addcontentsline{toc}{chapter}{Abstract}
+\thispagestyle{plain}
 \include{TexFiles/abstract}
 
-%Acknowledgement
-\cleardoublepage \addcontentsline{toc}{chapter}{Acknowledgement}
-\include{TexFiles/acknowledgment}
-
 %Publication list. NOT the actual papers.
+\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage \addcontentsline{toc}{chapter}{List of Publications}
-\include{TexFiles/listPub}
+\thispagestyle{plain}
+\include{TexFiles/publicationsList}
 
-%Declaration of your own contribution to the included papers
-\cleardoublepage \addcontentsline{toc}{chapter}{Personal Contribution}
-\include{TexFiles/contribution}
-
-%Any notes, if needed.
-% \cleardoublepage \addcontentsline{toc}{chapter}{Notes}
-% \include{TexFiles/notes}
+%Acknowledgement
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage \addcontentsline{toc}{chapter}{Acknowledgement}
+\thispagestyle{plain}
+\include{TexFiles/acknowledgment}
 
 %================================================================%
 % Table of contents, list of figures and tables
 %================================================================%
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage
+\thispagestyle{plain}
 \tableofcontents 
+\newpage
 
 %If needed, lists of figures and tables
 %\listoffigures
 %\listoftables
  
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage
+
 \mainmatter
 
 %================================================================%
 % Chapters
 %================================================================%
-\include{TexFiles/introduction}
-
-%The actual papers that are included in the thesis
+\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage 
-\include{TexFiles/appendedPapers}
+\part{Summary}
+\label{part:summary}
+\newpage
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage 
+\include{TexFiles/summary}
 
 %%================================================================%
 %% Bibliography
 %%================================================================%
+\newpage
+\thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage\addcontentsline{toc}{chapter}{Bibliography}
-%Different styles depending on whether you want numeric/alphabetic citation key
-\bibliographystyle{IEEEtran}
-%\bibliographystyle{apalike}
 
-%Your bibtex file
-\bibliography{lit}
+% Choose citation styles depending on whether you want numeric/alphabetic in settings.tex
+\printbibliography
+
+
+%================================================================%
+% Appended papers
+%================================================================%
+%The actual papers that are included in the thesis
+\newpage
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage 
+\part{Appended Papers}
+\newpage
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage 
+
+\include{TexFiles/appendedPapers}
+
 
 %
 %================================================================%
 % Appendices
 %================================================================%
-\cleardoublepage
+%\cleardoublepage
 %I place all appendices at the end of the thesis. Of course, you can also change this so that each appendix is directly following the paper it belongs to.
-\addcontentsline{toc}{chapter}{Appendix}
-\appendix
-\chapter{Appendix - Paper A}
-\input{TexFiles/paperA/03_appendix}
+%\addcontentsline{toc}{chapter}{Appendix}
+%\appendix
+%\chapter{Appendix - Paper A}
+%\input{papers/paperA/03_appendix}
+
+
 \end{document}

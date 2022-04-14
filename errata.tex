@@ -5,30 +5,38 @@
 %================================================================%
 \include{TexFiles/settings}
 
-\newcommand{\authorname}{Anders Andersson}
-\newcommand{\mytitle}{A Thesis on Computer Science}
-\newcommand{\division}{Software Engineering}
-
 %%==============The document begins here
 \begin{document}
 \frontmatter
 
-\begin{center} \Large \mytitle
-\vspace{1cm}
-\textsc{\authorname} \\
+\begin{center} \LARGE \mytitle\\
+\vspace{5mm}
+\textsc{\large\authorname} \\
+\vspace{5mm}
 \end{center}
 
-\thispagestyle{empty}
-\section*{Errata}
+\pagestyle{empty}
 
-Department of Computer Science \& Engineering\\
+\noindent
+\mydepartment\\
 Division of \division \\
-Chalmers University of Technology and Gothenburg University\\
-Gothenburg, Sweden
+\chalandgu\\
+Gothenburg, Sweden, \currentyear\\
+
+\section*{Errata}
 
 \vspace{3cm}
 
-Abstract, first paragraph, last sentence 
-Something with and error in it. -> Something with an error in it.
+\newcommand{\errata}[3]{
+\noindent
+#1:\\
+\hspace*{16pt}#2\\
+\hspace*{16pt}\textrightarrow\quad #3
+\\[2mm]
+}
+
+\errata{Abstract, first paragraph, last sentence}{Something with and error in it.}{Something without an error in it.}
+\errata{Abstract, second paragraph, first sentence}{Something with and error in it.}{Something without an error in it.}
+
 
 \end{document}
