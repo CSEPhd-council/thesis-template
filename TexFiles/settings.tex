@@ -4,6 +4,7 @@
 
 %Comment out or remove if it's a Licentiate thesis!
 \def\phdThesis{1}
+\def\philosophyThesis{1}
 
 % Important commands for this thesis!
 \newcommand{\currentyear}{2018}
@@ -33,10 +34,16 @@
 \newcommand{\chalIgu}{\chalmers~\IfItalicsTF{$|\!$}{$|$}~\gotuni} % The \! (negative thin space) is to fix kerning because italics seems to add extra space on the right of the inline math
 \newcommand{\chalandgu}{\chalmers~and~\gotuni}
 
-\ifx\phdThesis\undefined
-\newcommand{\degreetitle}{Licentiate of Engineering}
+\ifx\philosophyThesis\undefined
+\newcommand{\degreetype{Engineering}
 \else
-\newcommand{\degreetitle}{Doctor of Philosophy}
+\newcommand{\degreetype}{Philosophy}
+\fi
+
+\ifx\phdThesis\undefined
+\newcommand{\degreetitle}{Licentiate of \degreetype}
+\else
+\newcommand{\degreetitle}{Doctor of \]degreetype}
 \fi
 
 
