@@ -57,11 +57,11 @@ Roughly, the structure is as follows:
     - `dedication.tex` - dedication/smart quote at the beginning of your thesis.
     - `abstract.tex` - the abstract of your thesis.
     - `publicationsList.tex` - the list of all publications, both included and others. It only contains a list, the actual included papers are in appendedPapers.tex.
-    - `acknowledgment.tex` - the acknowledgements.
+    - `acknowledgment.tex` - the acknowledgments.
     - `summary.tex` - the kappa (introduction chapter).
     - `appendedPapers.tex` - this includes the actual papers to be used
 - `figures` contains the logos used in the presentation page.
-- `papers` contains the tex files of the included papers and their figures. You should change this with your own files, and edit appendedPapers.tex to include those instead. 
+- `papers` contains the tex files of the included papers and their figures. You should change this with your own files, and edit appendedPapers.tex to include those instead.
 
 This structure can easily be adapted to personal preferences.
 
@@ -77,7 +77,7 @@ These can be adjusted, but again require your own LaTeX skills.
 - Linda Erlenhov
 - Roc R. Currius
 
-### Acknowledgement note from the authors
+### Acknowledgment note from the authors
 
 This template has in a similar form been circulating in the CSE department for a while. Grischa originally received the template from Emil Alégroth. At that point, it also included some work from Robert Feldt. Now it's kept up-to-date by members of the PhD students council.
 
@@ -98,7 +98,7 @@ Thank you deeply for your contributions.
 
 ## Version Notes
 - 21st March 2022 (Roc) - Fixed template to match the latest directives from Chalmers from April 2020. Also some design changes, and a *lot* of changes on the latex structure to try to simplify use.
-- 8th October 2021 (Linda) - updated mentions of the universities to use both on the same form (Chalmers universtity of technology | University of Gothenburg), changed use of one logo, commented out tech report number from lic template since it's not used anymore. 
+- 8th October 2021 (Linda) - updated mentions of the universities to use both on the same form (Chalmers universtity of technology | University of Gothenburg), changed use of one logo, commented out tech report number from lic template since it's not used anymore.
 - 18th April 2018 (Grischa) - Added the tech report number also for PhD theses.
 - 16th April 2018 (Grischa) - Fixed the ISBN. Now the template follows the current layout instructions for both PhD and Lic.
 - 13th March 2018 (Grischa) - Cleaned up the template and wrote these instructions. Both the inlet and the errata should be revisited. Also, the second page (part of firstpage.tex) does not yet include the ISBN needed for PhD theses. For Lic it's fine!
