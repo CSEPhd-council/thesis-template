@@ -40,11 +40,15 @@
 \newcommand{\@sectionnostar}[1]{{\tocless\oldsection{#1}}}
 \renewcommand{\section}{\@ifstar{\@sectionstar}{\@sectionnostar}}
 
-
 \let\oldsubsection\subsection
 \newcommand{\@subsectionstar}[1]{{\oldsubsection*{#1}}}
 \newcommand{\@subsectionnostar}[1]{{\tocless\oldsubsection{#1}}}
 \renewcommand{\subsection}{\@ifstar{\@subsectionstar}{\@subsectionnostar}}
+
+\let\oldsubsubsection\subsubsection
+\newcommand{\@subsubsectionstar}[1]{{\oldsubsubsection*{#1}}}
+\newcommand{\@subsubsectionnostar}[1]{{\tocless\oldsubsubsection{#1}}}
+\renewcommand{\subsubsection}{\@ifstar{\@subsubsectionstar}{\@subsubsectionnostar}}
 
 \makeatother
 
