@@ -32,6 +32,11 @@
 % To avoid adding sections (and lower) to the TOC
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
+% Hide chapter number in appended paper sections, as the papers can be seen as appended and not part of the chapters in the kappa
+\counterwithout{section}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
 %%===============================================================%
 %%                     Appended papers                           %
 %%===============================================================%
