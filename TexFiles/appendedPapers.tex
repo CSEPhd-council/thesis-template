@@ -67,8 +67,12 @@
 % You can use this to include a pdf file instead
 %\includepdf[pages={-}]{papers/some-paper.pdf}
 
+% Reset counters for numberings such as page, section, figure...
 \renewcommand{\thepage}{{\arabic{page} (\romannum{\thepapercounter})}}
 \setcounter{page}{1}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 \pagestyle{plain}
 
@@ -80,8 +84,12 @@
 
 \paperpage{\textbf{A.~Andersson}}{The Second Paper}{Submitted, under review}{}
 
+% Reset counters for numberings such as page, section, figure...
 \renewcommand{\thepage}{{\arabic{page} (\romannum{\thepapercounter})}}
 \setcounter{page}{1}
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 \pagestyle{plain}
 
