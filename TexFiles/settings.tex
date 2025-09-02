@@ -137,6 +137,11 @@ Technical Report No. \techReportNumber \\
 \usepackage[textsize=tiny,textwidth=20mm,backgroundcolor=orange!70]{todonotes}
 \setlength{\marginparwidth}{20mm} % This is so the notes don't get cut out of the page
 
+\usepackage[hidelinks]{hyperref}
+% Disable uppercase command in pdf strings (from hyperref)
+\pdfstringdefDisableCommands{%
+  \def\uppercase#1{<#1>}%
+}
 
 
 %----------Some commands you can use-----------%
