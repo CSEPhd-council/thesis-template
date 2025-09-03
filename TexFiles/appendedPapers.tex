@@ -3,6 +3,7 @@
 %%===============================================================%
 \newcounter{papercounter}
 \setcounter{papercounter}{0}
+\renewcommand{\thepapercounter}{\romannum{\value{papercounter}}} % Change it so that \thepapercounter is displayed as a roman numeral
 
 \newcommand{\paperpage}[4]{
 \newpage
@@ -10,8 +11,7 @@
 \renewcommand{\thepage}{}
 \thispagestyle{empty}
 \cleardoublepage
-\hfill{\Large \textbf{Paper \romannum{\thepapercounter}}}
-\label{app:paper_\arabic{papercounter}}
+\hfill{\Large \textbf{Paper \thepapercounter}}
 \vspace*{\fill}
     \begin{center}
         \textbf{\Large #2}\\
@@ -22,7 +22,7 @@
     \end{center}
 \vfill
 #4
-\addcontentsline{toc}{chapter}{\textbf{Paper \romannum{\thepapercounter}} - #2}
+\addcontentsline{toc}{chapter}{\textbf{Paper \thepapercounter} - #2}
 %----- include -----
 \newpage
 \thispagestyle{empty}
@@ -54,11 +54,12 @@
 %Include each paper as shown below. Abstracts are in a separate file.
 
 \paperpage{\textbf{A.~Andersson}, S.~O.~Person, J.~Whoever}{Title of the first paper}{Some Journal 39 (May 2019), 133-144}{doi goes here}
+\label{paper:first-paper-label}
 
 % You can use this to include a pdf file instead
 %\includepdf[pages={-}]{papers/some-paper.pdf}
 
-\renewcommand{\thepage}{{\arabic{page} (\romannum{\thepapercounter})}}
+\renewcommand{\thepage}{{\arabic{page} (\thepapercounter)}}
 \setcounter{page}{1}
 
 \pagestyle{plain}
@@ -70,8 +71,9 @@
 %%%%%%
 
 \paperpage{\textbf{A.~Andersson}}{The Second Paper}{Submitted, under review}{}
+\label{paper:second-paper-label}
 
-\renewcommand{\thepage}{{\arabic{page} (\romannum{\thepapercounter})}}
+\renewcommand{\thepage}{{\arabic{page} (\thepapercounter)}}
 \setcounter{page}{1}
 
 \pagestyle{plain}
