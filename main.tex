@@ -35,6 +35,17 @@
 \thispagestyle{plain}
 \include{TexFiles/publicationsList}
 
+\ifx\authorshipStatementSection\undefined
+\else
+%Authorship statement
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage \addcontentsline{toc}{chapter}{Authorship Statement}
+\thispagestyle{plain}
+\include{TexFiles/authorshipStatement}
+\fi
+
+
+
 %Acknowledgment
 \thispagestyle{empty} % To avoid page numbers in blank pages
 \cleardoublepage \addcontentsline{toc}{chapter}{Acknowledgment}
@@ -95,7 +106,6 @@
 \cleardoublepage
 
 \include{TexFiles/appendedPapers}
-
 
 %
 %================================================================%
