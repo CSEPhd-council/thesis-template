@@ -30,23 +30,8 @@
 }
 
 % To avoid adding things to the TOC
-\makeatletter
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 
-\newcommand{\nocontentsline}[3]{}
-\newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
-
-\let\oldsection\section
-\newcommand{\@sectionstar}[1]{{\oldsection*{#1}}}
-\newcommand{\@sectionnostar}[1]{{\tocless\oldsection{#1}}}
-\renewcommand{\section}{\@ifstar{\@sectionstar}{\@sectionnostar}}
-
-
-\let\oldsubsection\subsection
-\newcommand{\@subsectionstar}[1]{{\oldsubsection*{#1}}}
-\newcommand{\@subsectionnostar}[1]{{\tocless\oldsubsection{#1}}}
-\renewcommand{\subsection}{\@ifstar{\@subsectionstar}{\@subsectionnostar}}
-
-\makeatother
 
 %%===============================================================%
 %%                     Appended papers                           %
