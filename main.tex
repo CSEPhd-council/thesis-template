@@ -1,7 +1,7 @@
 \documentclass[10pt,onecolumn,openright]{book}
 
 % Configure title, author, etc of the thesis in TexFiles/settings.tex
-
+% Creating a branch
 %================================================================%
 %  All packages and new commands are treated in an own document  %
 %================================================================%
@@ -34,6 +34,17 @@
 \cleardoublepage \addcontentsline{toc}{chapter}{List of Publications}
 \thispagestyle{plain}
 \include{TexFiles/publicationsList}
+
+\ifx\authorshipStatementSection\undefined
+\else
+%Authorship statement
+\thispagestyle{empty} % To avoid page numbers in blank pages
+\cleardoublepage \addcontentsline{toc}{chapter}{Authorship Statement}
+\thispagestyle{plain}
+\include{TexFiles/authorshipStatement}
+\fi
+
+
 
 %Acknowledgment
 \thispagestyle{empty} % To avoid page numbers in blank pages
@@ -95,7 +106,6 @@
 \cleardoublepage
 
 \include{TexFiles/appendedPapers}
-
 
 %
 %================================================================%
